@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B1120;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #C9A24B;
+  color: #0B1120;
+}
+
+@layer components {
+  /* Signature "ledger line" element — thin rule + eyebrow label */
+  .ledger {
+    @apply flex items-center gap-3.5 mb-7;
+  }
+  .ledger::before {
+    content: '';
+    @apply flex-none w-7 h-px bg-gold;
+  }
+  .ledger span {
+    @apply font-body text-xs font-semibold tracking-widest uppercase text-gold-soft;
+  }
+  .ledger::after {
+    content: '';
+    @apply flex-1 h-px bg-line;
+  }
+  .ledger-dark::before {
+    @apply bg-blue;
+  }
+  .ledger-dark span {
+    @apply text-blue;
+  }
+  .ledger-dark::after {
+    background-color: rgba(11, 17, 32, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
