@@ -7,8 +7,15 @@ const meta = [
 
 export default function Hero() {
   return (
-    <section className="pt-16 pb-14">
-      <div className="max-w-[960px] mx-auto px-6 text-center">
+<section 
+  className="relative w-full min-h-[60vh] flex items-center justify-center" 
+  style={{
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://cdn.pixabay.com/photo/2017/05/08/19/04/agenda-2296195_1280.jpg")', 
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }}
+>
+      <div className="w-full max-w-[900px] px-6 py-16 text-center">
         <div
           className="text-[13px] font-semibold tracking-widest uppercase text-gold-soft mb-5 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.05s' }}
@@ -26,7 +33,7 @@ export default function Hero() {
         </h1>
 
         <p
-          className="text-lg text-center leading-relaxed text-text-muted max-w-[840px] mb-9 opacity-0 animate-fadeUp"
+          className="text-lg leading-relaxed text-text-muted max-w-[840px] mx-auto mb-9 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.25s' }}
         >
           In one live session, we&rsquo;ll show you the exact gap between people who{' '}
@@ -35,11 +42,11 @@ export default function Hero() {
         </p>
 
         <div
-          className="flex flex-wrap gap-7 py-5 border-t border-b border-line mb-10 opacity-0 animate-fadeUp"
+          className="flex flex-wrap gap-7 py-5 border-t border-b border-line mb-10 opacity-0 animate-fadeUp justify-center"
           style={{ animationDelay: '0.35s' }}
         >
           {meta.map((item) => (
-            <div key={item.label} className="flex flex-col gap-1 mx-auto">
+            <div key={item.label} className="flex flex-col gap-1 px-4">
               <span className="text-[11px] tracking-widest uppercase text-text-muted">
                 {item.label}
               </span>
