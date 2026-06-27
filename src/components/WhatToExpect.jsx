@@ -4,7 +4,7 @@ const items = [
   {
     num: '01',
     icon: Compass,
-    title: 'The Vifscale Strategy™: Your K.T.I Blueprint',
+    title: 'The K.T.I Method™: Your Blueprint',
     text: 'A proprietary, step-by-step framework to strip away the fluff and turn your existing knowledge into a high-demand offer.',
   },
   {
@@ -29,35 +29,35 @@ const items = [
 
 export default function WhatToExpect() {
   return (
-    <section className="py-20 bg-ink-soft">
-      <div className="max-w-[800px] mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="ledger ledger-dark inline-block mb-4">
-            <span>What You Will Walk Away With</span>
-          </div>
-          <h2 className="font-display font-medium text-3xl sm:text-4xl text-text-light">
-            A masterclass designed for <span className="text-gold-soft italic">results</span>, not theory.
-          </h2>
+    <section className="py-12">
+      <div className="max-w-[960px] mx-auto px-6">
+        <div className="ledger">
+          <span>What To Expect</span>
         </div>
 
-        <ul className="space-y-6">
-          {items.map((item) => {
+        <ul className="mt-2">
+          {items.map((item, i) => {
             const Icon = item.icon
             return (
               <li
                 key={item.num}
-                className="flex gap-5 p-6 bg-text-light/[0.03] border border-line hover:border-gold-soft/30 transition-all duration-300 group rounded-lg"
+                className={`flex gap-4 py-4 border-b border-line ${
+                  i === 0 ? 'border-t' : ''
+                }`}
               >
-                <div className="flex-none">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold-soft mb-2">
-                    <Icon size={20} strokeWidth={2} />
-                  </div>
-                </div>
+                <span className="font-display text-sm text-gold-soft flex-none w-6 pt-0.5">
+                  {item.num}
+                </span>
+                <Icon
+                  className="flex-none text-gold-soft mt-0.5"
+                  size={18}
+                  strokeWidth={1.75}
+                />
                 <div>
-                  <h3 className="font-display font-medium text-[18px] text-text-light mb-1.5 group-hover:text-gold-soft transition-colors">
+                  <h3 className="font-display font-medium text-[17px] text-text-light mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-[15px] text-text-muted leading-relaxed">
+                  <p className="text-[14.5px] text-text-muted leading-snug">
                     {item.text}
                   </p>
                 </div>
@@ -65,17 +65,6 @@ export default function WhatToExpect() {
             )
           })}
         </ul>
-
-        {/* Micro-CTA for those who reach this point */}
-        <div className="mt-12 text-center">
-          <p className="text-text-muted text-sm mb-4">Ready to build your offer?</p>
-          <a 
-            href="#registration" 
-            className="inline-block bg-gold hover:bg-gold-soft text-ink font-bold px-8 py-3 rounded-sm transition-all"
-          >
-            Secure Your Free Seat
-          </a>
-        </div>
       </div>
     </section>
   )
