@@ -13,7 +13,7 @@ export default function Hero() {
           className="text-[13px] font-semibold tracking-widest uppercase text-gold-soft mb-5 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.05s' }}
         >
-          Free Live Masterclass · Saturday, 27 June 2026
+          Free Live Masterclass · Saturday, 4 July 2026
         </div>
 
         <h1
