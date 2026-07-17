@@ -1,5 +1,5 @@
 const meta = [
-  { label: 'Date', value: 'Fri, 17 July 2026' },
+  { label: 'Date', value: 'Sat, 25 July 2026' },
   { label: 'Time', value: '8:00 – 9:00 PM (WAT)' },
   { label: 'Where', value: 'Live on Vifscale' },
   { label: 'Cost', value: 'Free' },
