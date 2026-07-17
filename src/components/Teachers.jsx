@@ -8,7 +8,7 @@ export default function Teachers() {
         </div>
 
         <h2 className="font-display font-medium text-ink leading-[1.1] mb-8 text-[22px] sm:text-[32px]">
-        It's not the Market's fault. <span className="italic">You're not making that extra income</span>.
+        It's not the Market's fault <span className="italic">that you're not making that extra income</span>.
         </h2>
 
         <p className="text-[18px] leading-relaxed text-[#3A3528] mb-12 max-w-[700px] mx-auto">
