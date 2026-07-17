@@ -22,23 +22,20 @@ export default function Hero() {
         >
           {`Free Live Masterclass · ${meta[0].value}`}
         </div>
-
         <h1
           className="font-display font-medium text-text-light leading-[1.08] tracking-tight mb-5 opacity-0 animate-fadeUp text-[44px] sm:text-[54px] md:text-[64px]"
           style={{ animationDelay: '0.15s' }}
         >
-          Come let me show you how that knowledge you call{' '}
-          <span className="italic text-gold-soft">&ldquo;nothing&rdquo;</span> can earn you extra dollars.
+          The knowledge you&rsquo;re giving away for free could be earning you{' '}
+          <span className="italic text-gold-soft">real dollars</span>.
         </h1>
-
         <p
           className="text-lg leading-relaxed text-text-muted max-w-[840px] mx-auto mb-9 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.25s' }}
         >
-          In one live session, we&rsquo;ll show you the exact strategy to bridge the gap between people who{' '}
-          <em>have</em> knowledge and people who actually <em className="text-yellow-400">get paid</em> for it.
+          In one live session, I&rsquo;ll show you the Economic Pain Hook, the exact framework that separates people who{' '}
+          <em>have</em> knowledge from people who actually <em className="text-yellow-400">get paid</em> for it.
         </p>
-
         <div
           className="flex flex-wrap gap-7 py-5 border-t border-b border-line mb-10 opacity-0 animate-fadeUp justify-center"
           style={{ animationDelay: '0.35s' }}
@@ -53,6 +50,17 @@ export default function Hero() {
               </span>
             </div>
           ))}
+        </div>
+        <div
+          className="opacity-0 animate-fadeUp"
+          style={{ animationDelay: '0.45s' }}
+        >
+          <a
+            href="#registration"
+            className="inline-block bg-gold-soft text-ink px-8 py-4 text-[10px] sm:text-[12px] md:text-[16px] font-semibold hover:bg-white transition-all uppercase tracking-widest"
+          >
+            Reserve Your Free Seat Now
+          </a>
         </div>
       </div>
     </section>
