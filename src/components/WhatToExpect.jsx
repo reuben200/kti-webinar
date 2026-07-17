@@ -1,29 +1,29 @@
-import { Clock, Compass, DollarSign, MessagesSquare } from 'lucide-react'
+import { Target, Layers, Compass, MessagesSquare } from 'lucide-react'
 
 const items = [
   {
     num: '01',
-    icon: Compass,
-    title: 'The K.T.I Method™: Your Blueprint',
-    text: 'A proprietary, step-by-step framework to strip away the fluff and turn your existing knowledge into a high-demand offer.',
+    icon: Target,
+    title: 'The Economic Pain Hook',
+    text: 'Learn how to name the specific, costly problem your knowledge solves, so buyers see the price as obvious instead of something to negotiate.',
   },
   {
     num: '02',
-    icon: DollarSign,
-    title: 'Transparent Revenue Modeling',
-    text: "We’ll pull back the curtain on real dollar figures. No 'get-rich-quick' hype—just clear, achievable income math.",
+    icon: Layers,
+    title: 'Micro-Asset Leverage',
+    text: "You don't need a massive course. See the exact anatomy of a 5 to 10 page asset that proves your value fast and captures leads on its own.",
   },
   {
     num: '03',
-    icon: MessagesSquare,
-    title: 'Interactive Hot-Seat Coaching',
-    text: 'This isn’t a passive webinar. We engage in live polls, direct Q&A, and real-time feedback to solve your specific bottlenecks.',
+    icon: Compass,
+    title: 'Profitable Micro-Niche Mapping',
+    text: 'A simple scoring method to find buyers who have urgent problems and the budget to solve them now, so you stop guessing who to sell to.',
   },
   {
     num: '04',
-    icon: Clock,
-    title: 'Proven Velocity Systems',
-    text: 'Learn the exact systems that have saved me hundreds of hours. Stop guessing, start executing with a repeatable process.',
+    icon: MessagesSquare,
+    title: 'Live Q&A and Feedback',
+    text: "This isn't a passive webinar. Live polls, direct Q&A, and real-time feedback on your specific offer.",
   },
 ]
 
@@ -34,7 +34,6 @@ export default function WhatToExpect() {
         <div className="ledger">
           <span>What To Expect</span>
         </div>
-
         <ul className="mt-2">
           {items.map((item, i) => {
             const Icon = item.icon
