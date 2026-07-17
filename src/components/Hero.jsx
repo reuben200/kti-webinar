@@ -1,6 +1,6 @@
 const meta = [
   { label: 'Date', value: 'Sat, 25 July 2026' },
-  { label: 'Time', value: '8:00 – 9:00 PM (WAT)' },
+  { label: 'Time', value: '7:00 – 8:00 PM (WAT)' },
   { label: 'Where', value: 'Live on Vifscale' },
   { label: 'Cost', value: 'Free' },
 ]
@@ -27,17 +27,16 @@ export default function Hero() {
           className="font-display font-medium text-text-light leading-[1.08] tracking-tight mb-5 opacity-0 animate-fadeUp text-[44px] sm:text-[54px] md:text-[64px]"
           style={{ animationDelay: '0.15s' }}
         >
-          The knowledge you call{' '}
-          <span className="italic text-gold-soft">&ldquo;nothing&rdquo;</span> is worth
-          more than you think.
+          Come let me show you how that knowledge you call{' '}
+          <span className="italic text-gold-soft">&ldquo;nothing&rdquo;</span> can earn you extra dollars.
         </h1>
 
         <p
           className="text-lg leading-relaxed text-text-muted max-w-[840px] mx-auto mb-9 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.25s' }}
         >
-          In one live session, we&rsquo;ll show you the exact gap between people who{' '}
-          <em>have</em> knowledge and people who <em className="text-yellow-400">get paid</em> for it. And how to bridge that gap.
+          In one live session, we&rsquo;ll show you the exact strategy to bridge the gap between people who{' '}
+          <em>have</em> knowledge and people who actually <em className="text-yellow-400">get paid</em> for it.
         </p>
 
         <div
