@@ -16,7 +16,7 @@ export default function RegistrationForm() {
   const [location, setLocation] = useState('')
   const [source, setSource] = useState('')
   const [status, setStatus] = useState(STATUS.IDLE)
-  
+
   const successRef = useRef(null)
 
   // Auto-scroll to success message
@@ -36,7 +36,7 @@ export default function RegistrationForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    
+
     // Basic validation
     if (!name.trim() || !email.trim()) return
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -46,14 +46,14 @@ export default function RegistrationForm() {
     }
 
     setStatus(STATUS.SENDING)
-    
+
     try {
       // 1. SAVE: Insert into Supabase
       // Note: Ensure your 'registrations' table has a UNIQUE constraint on 'email'
       const { error: dbError } = await supabase
         .from('registrations')
-        .insert([{ 
-          name: name.trim(), 
+        .insert([{
+          name: name.trim(),
           email: email.trim(),
           location: location.trim(),
           referral_source: source
@@ -67,7 +67,7 @@ export default function RegistrationForm() {
 
       // 2. SEND EMAIL: Trigger EmailJS
       await sendRegistrationEmail({ name: name.trim(), email: email.trim() })
-      
+
       setStatus(STATUS.SUCCESS)
       setName('')
       setEmail('')
@@ -75,12 +75,13 @@ export default function RegistrationForm() {
       setSource('')
     } catch (err) {
       console.error('Registration error:', err)
+
       if (err.message === 'DUPLICATE_EMAIL') {
         alert("This email is already registered!")
+        setStatus(STATUS.IDLE)
       } else {
         setStatus(STATUS.ERROR)
       }
-      setStatus(STATUS.IDLE)
     }
   }
 
