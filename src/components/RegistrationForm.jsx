@@ -167,7 +167,7 @@ export default function RegistrationForm() {
             {status === STATUS.SUCCESS && (
               <div ref={successRef} className="flex items-start gap-2.5 bg-gold/[0.12] border border-gold/40 text-gold-soft rounded-sm px-4 py-3.5 text-sm leading-relaxed mt-4">
                 <CheckCircle2 size={18} className="flex-none mt-0.5" />
-                <span>Check your inbox or promotions, your confirmation email is on its way.</span>
+                <span>Check your inbox or promotions, your confirmation email is on its way. Kindly check your spam box too. Sometimes it misses its way way there!</span>
               </div>
             )}
 
